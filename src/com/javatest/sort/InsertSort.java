@@ -2,9 +2,10 @@ package com.javatest.sort;
 
 import java.util.Arrays;
 
+
 /**
  * 直接插入排序  代码
- * 时间复杂度：O（n^2�?
+ * 时间复杂度：O（n^2）
  *
  *  @param data
  */
@@ -12,7 +13,7 @@ public class InsertSort {
 
     public  static void insertSort(int[] arr){
         /**
-         * 具体流程如下:
+         * 具体流程如下：
          *
          * 1、首先比较数组的前两个数据，并排序；
          *
@@ -22,16 +23,16 @@ public class InsertSort {
          *
          * ......
          *
-         * 4、直至把�?后一个元素放入�?�当的位置�??
+         * 4、直至把最后一个元素放入适当的位置。
          */
         int temp;//
         if(arr.length>1){
             for (int k = 1; k <arr.length ; k++) {
                 temp=arr[k];
-                //从右�?左比�?
+                //从右往左比较
                 int l;
                 for ( l = k-1; l>=0  ; l--) {
-                    if(arr[l]>temp){ //只要arr[l] >temp  就该右移�?个位置；
+                    if(arr[l]>temp){ //只要arr[l] >temp  就该右移一个位置；
                         arr[l+1]=arr[l];
                     }else{
                        // arr[l + 1] = temp;
@@ -40,7 +41,7 @@ public class InsertSort {
                     System.out.println(k+"    "+Arrays.toString(arr));
                 }
                 arr[l + 1] = temp;
-                System.out.println("  交换�?  "+Arrays.toString(arr));
+                System.out.println("  交换后  "+Arrays.toString(arr));
 
             }
 
@@ -60,7 +61,7 @@ public class InsertSort {
         while (i<arr.length){
             temp=arr[i];
             int j;
-            //for (j = i-1; j >=0 ; j--) {//将所有大于temp�? 右移�?个位置，给temp找位�?
+            //for (j = i-1; j >=0 ; j--) {//将所有大于temp的 右移一个位置，给temp找位置
             j = i-1;
             while (j>=0){
                 if(arr[j]>temp){
@@ -70,7 +71,7 @@ public class InsertSort {
                     break;
                 }
             }
-            arr[j+1]=temp; //插入到位�?;
+            arr[j+1]=temp; //插入到位置;
             i++;
         }
     }

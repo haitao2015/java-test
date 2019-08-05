@@ -17,7 +17,7 @@ public class BubbleSort {
     }
 
     /**
-     * 冒泡排序  从前�?�?; 即从左往右；
+     * 冒泡排序  从前往后; 即从左往右；
      * @param arr
      */
     public  static void bubbleSortLeftToRiht(int[] arr){
@@ -35,14 +35,14 @@ public class BubbleSort {
     }
 
     /**
-     * 冒泡排序  从后�?�?; 即从右往左；
+     * 冒泡排序  从后往前; 即从右往左；
      * @param arr
      */
     public  static void bubbleSortRihtToLeft(int[] arr){
-        int temp=0;//临时变量�?
+        int temp=0;//临时变量；
         int count=0;
         for (int i = 0; i < arr.length; i++) {
-            System.out.println("�?"+i+"趟：");
+            System.out.println("第"+i+"趟：");
             for (int j=arr.length-1;j>i;j--){
                     count++;
                 if(arr[j-1]>arr[j]){
@@ -52,6 +52,6 @@ public class BubbleSort {
                 }
             }
         }
-        System.out.println("执行次数�?"+count);
+        System.out.println("执行次数："+count);
     }
 }
